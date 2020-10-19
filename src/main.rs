@@ -5,6 +5,7 @@ mod hittables;
 use camera::{Camera};
 use ray::{Ray};
 use hittables::{Sphere, ray_color, HittableCollection};
+use std::env;
 
 mod constants {
     pub const ASPECT_RATIO: f32 = 16. / 9.;
@@ -37,5 +38,12 @@ fn main() {
         }
     }
 
-    save_buffer("out.png", pixels.as_slice(), constants::IMAGE_WIDTH, constants::IMAGE_HEIGHT, ColorType::Rgb8).unwrap()
+    let args: Vec<String> = env::args().collect();
+    let fname = match args.len() {
+        0 | 1 => "out.png",
+        _ => args[1].as_str()
+    };
+
+    println!("fname is {}", fname);
+    save_buffer(fname, pixels.as_slice(), constants::IMAGE_WIDTH, constants::IMAGE_HEIGHT, ColorType::Rgb8).unwrap()
 }
