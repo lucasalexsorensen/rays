@@ -9,7 +9,7 @@ use std::env;
 
 mod constants {
     pub const ASPECT_RATIO: f32 = 16. / 9.;
-    pub const IMAGE_WIDTH: u32 = 800;
+    pub const IMAGE_WIDTH: u32 = 1200;
     pub const IMAGE_HEIGHT: u32 = (IMAGE_WIDTH as f32 / ASPECT_RATIO) as u32;
     pub const VIEWPORT_HEIGHT: f32 = 2.;
     pub const VIEWPORT_WIDTH: f32 = ASPECT_RATIO * VIEWPORT_HEIGHT;
