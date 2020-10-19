@@ -10,7 +10,7 @@ pub struct Camera {
 impl Camera {
     pub fn new() -> Camera {
         return Camera {
-            focal_length: 1.,
+            focal_length: 0.5,
             origin: Vector3::new(0., 0., 0.),
             horizontal: Vector3::new(crate::constants::VIEWPORT_WIDTH as f32, 0., 0.),
             vertical: Vector3::new(0., crate::constants::VIEWPORT_HEIGHT as f32, 0.)
