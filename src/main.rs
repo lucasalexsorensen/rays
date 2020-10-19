@@ -23,6 +23,7 @@ fn main() {
 
     let mut hittables = HittableCollection::new();
     hittables.add(Sphere::new(0., 0., -1., 0.5));
+    hittables.add(Sphere::new(-2., 0., -2., 0.5));
 
     for j in (0..constants::IMAGE_HEIGHT).rev() {
         for i in 0..constants::IMAGE_WIDTH {
